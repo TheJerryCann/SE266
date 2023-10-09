@@ -1,6 +1,6 @@
 <?php
 
-$animals = [
+$animals = [ #array of animals
     'Cat',
     'Dog',
     'Lion',
@@ -9,3 +9,4 @@ $animals = [
 ];
 
 require 'index.view.php';
+#links php pages together
