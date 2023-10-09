@@ -9,7 +9,7 @@
 <body>
     
     <ul>
-        <?php foreach ($animals as $animal) : ?>
+        <?php foreach ($animals as $animal) : ?> <!-- loops through the array of animals and prints them in a list -->
             <li><?= $animal; ?></li>
         <?php endforeach; ?>
     </ul>
