@@ -16,4 +16,7 @@ $tasks = [ #Task D and E: array of tasks
 ];
 
 require 'index.view.php';
+require 'functions.php';
 #links php pages together
+
+dd($animals); #calls function
