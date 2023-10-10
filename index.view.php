@@ -13,6 +13,11 @@
             <li><?= $animal; ?></li>
         <?php endforeach; ?>
     </ul>
+    <ul> 
+        <?php foreach ($tasks as $key => $task) : ?> <!-- loops through the array of tasks and keys then prints them in a list -->
+            <li><strong><?= $key; ?></strong> <?= $task; ?></li>
+        <?php endforeach; ?>
+    </ul>
 
 </body>
 </html>
