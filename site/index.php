@@ -1,7 +1,7 @@
 <?php include __DIR__ . '/../include/header.php'; ?>
 <p>Alex Rea</p>
 <ul>
-    <li><a href="..W1/index.php">Week 1</li>
+    <li><a href="../W1/index.php">Week 1</li>
     <li><a href="W2/index.php">Week 2</li>
     <li><a href="W3/index.php">Week 3</li>
     <li><a href="W4/index.php">Week 4</li>
