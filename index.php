@@ -8,5 +8,12 @@ $animals = [ #array of animals
     'Tiger'
 ];
 
+$tasks = [ #array of tasks
+    'Title' => 'Homework',
+    'Due' => '10/9/2023',
+    'Assigned_to' => 'Alex',
+    'Completed' => 'Yes'
+];
+
 require 'index.view.php';
 #links php pages together
