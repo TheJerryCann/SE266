@@ -1,6 +1,6 @@
 <?php
 
-$animals = [ #array of animals
+$animals = [ #Task C: array of animals
     'Cat',
     'Dog',
     'Lion',
@@ -8,11 +8,11 @@ $animals = [ #array of animals
     'Tiger'
 ];
 
-$tasks = [ #array of tasks
+$tasks = [ #Task D and E: array of tasks
     'Title' => 'Homework',
     'Due' => '10/9/2023',
     'Assigned_to' => 'Alex',
-    'Completed' => 'Yes'
+    'Completed' => true
 ];
 
 require 'index.view.php';
