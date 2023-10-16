@@ -12,7 +12,6 @@
     <input type="text" name="fname" required>
 </body>
 <script>
-    fname = document.querySelector('#fname').value
-    console.log($patient)
+    $fname = document.querySelector('#fname').value
 </script>
 </html>
