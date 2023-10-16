@@ -9,5 +9,6 @@
 </head>
 <body>
     <label for="fname">First Name</label>
+    <input type="text" name="fname" required>
 </body>
 </html>
