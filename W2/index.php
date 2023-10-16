@@ -12,11 +12,6 @@ class Patient{
         $this->fname = $p;
     }
 }
-$patient = [
-    'First Name' => '',
-    'Last Name' => '',
-    ''
-]
 
 
 require 'index.view.php';
