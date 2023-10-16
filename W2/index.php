@@ -6,8 +6,8 @@ $patient = [
     'Married' => '',
     'Birth Date' => '',
     'Height' => '',
-    'Weight' => '';
-]
+    'Weight' => ''
+];
 
 
 require 'index.view.php';
