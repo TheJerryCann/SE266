@@ -11,4 +11,8 @@
     <label for="fname">First Name:</label>
     <input type="text" name="fname" required>
 </body>
+<script>
+    fname = document.querySelector('#fname').value
+    console.log($patient)
+</script>
 </html>
