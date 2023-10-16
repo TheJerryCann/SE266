@@ -8,6 +8,6 @@
     <h1>Patient Intake Form</h1>
 </head>
 <body>
-    
+    <label for="fname">First Name</label>
 </body>
 </html>
