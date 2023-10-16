@@ -1,14 +1,14 @@
 <?php 
 
 $patient = [
-    'First Name' => document.querySelector('#fname').value,
+    'First Name' => $fname,
     'Last Name' => '',
     'Married' => '',
     'Birth Date' => '',
     'Height' => '',
     'Weight' => ''
 ];
-console.log($patient)
+
 
 require 'index.view.php';
 
