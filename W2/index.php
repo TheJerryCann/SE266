@@ -4,6 +4,9 @@
         echo "Form Submitted<hr />"
         echo $_POST['fname']
     }
+    else {
+        echo "ERROR"
+    }
 
 ?>
 <!DOCTYPE html>
