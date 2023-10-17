@@ -1,5 +1,5 @@
 <?php
-    if (isset($_POST['submit'])){
+    if (isset($_POST['submitBtn'])){
         echo "Form Submitted<hr />";
         $fname = filter_input(INPUT_POST,'fname',FILTER_VALIDATE_TEXT);
         if ($fname == "" ){
@@ -44,7 +44,7 @@
         <label for="weight">Weight:</label>
         <input type="number" name="weight" value="0" required>
         <br><br>
-        <input type="button" name="submit" value="submit"/>
+        <input type="button" name="submitBtn" value="submit"/>
         </form>
 </body>
 </html>
