@@ -1,13 +1,11 @@
 <?php
-
     if (isset($_POST['submit'])){
         echo "Form Submitted<hr />";
-        echo $_POST['fname'];
+        $fname = filter_input(INPUT_POST,'fname',FILTER_VALIDATE_TEXT);
     }
     else {
         echo "ERROR";
     }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
