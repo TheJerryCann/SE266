@@ -3,7 +3,7 @@
         echo "Form Submitted<hr />";
         $fname = filter_input(INPUT_POST,'fname',FILTER_VALIDATE_TEXT);
         if ($fname == "" ){
-            echo "Please enter a name"
+            echo "Please enter a name";
         }
         $lname = filter_input(INPUT_POST,'lname',FILTER_VALIDATE_TEXT);
         $married = filter_input(INPUT_POST,'married',FILTER_VALIDATE_CHECKBOX);
