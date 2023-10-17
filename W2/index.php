@@ -2,7 +2,9 @@
     if (isset($_POST['submit'])){
         echo "Form Submitted<hr />";
         $fname = filter_input(INPUT_POST,'fname',FILTER_VALIDATE_TEXT);
-
+        if ($fname == "" ){
+            echo "Please enter a name"
+        }
         $lname = filter_input(INPUT_POST,'lname',FILTER_VALIDATE_TEXT);
         $married = filter_input(INPUT_POST,'married',FILTER_VALIDATE_CHECKBOX);
         $bday = filter_input(INPUT_POST,'bday',FILTER_VALIDATE_DATE);
@@ -42,7 +44,7 @@
         <label for="weight">Weight:</label>
         <input type="number" name="weight" required>
         <br><br>
-        <input type="button" name="submit"/>
+        <input type="button" name="submit" value="submit"/>
         </form>
 </body>
 </html>
