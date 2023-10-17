@@ -27,10 +27,10 @@
 <body>
     <form action="index.php" method="post">
         <label for="fname">First Name:</label>
-        <input type="text" name="fname" required>
+        <input type="text" name="fname" value="" required>
         <br><br>
         <label for="lname">Last Name:</label>
-        <input type="text" name="lname" required>
+        <input type="text" name="lname" value="" required>
         <br><br>
         <label for="married">Married:</label>
         <input type="checkbox" name="married" required>
@@ -39,10 +39,10 @@
         <input type="date" name="bday" required>
         <br><br>
         <label for="height">Height(in):</label>
-        <input type="number" name="height" required>
+        <input type="number" name="height" value="0" required>
         <br><br>
         <label for="weight">Weight:</label>
-        <input type="number" name="weight" required>
+        <input type="number" name="weight" value="0" required>
         <br><br>
         <input type="button" name="submit" value="submit"/>
         </form>
