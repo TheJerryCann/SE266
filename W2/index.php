@@ -1,5 +1,6 @@
 <?php
-if (isset($_POST['submit'])){
+
+    if (isset($_POST['submit'])){
         echo "Form Submitted<hr />"
         echo $_POST['fname']
     }
