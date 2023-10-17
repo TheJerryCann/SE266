@@ -41,12 +41,4 @@
         <input type="button" id="submit" value="submit" onclick="" />
         </form>
 </body>
-<script>
-    fname = document.querySelector('#fname').value
-    lname = document.querySelector('#lname').value
-    married = document.querySelector('#married').value
-    bday = document.querySelector('#bday').value
-    height = document.querySelector('#height').value
-    weight = document.querySelector('#weight').value
-</script>
 </html>
