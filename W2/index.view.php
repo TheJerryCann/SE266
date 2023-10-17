@@ -26,6 +26,7 @@
     <label for="weight">Weight:</label>
     <input type="number" name="weight" required>
     <br><br>
+    <input type="button" id="submit" value="submit" onclick="" />
 </body>
 <script>
     $fname = document.querySelector('#fname').value
