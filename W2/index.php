@@ -2,17 +2,22 @@
     if (isset($_POST['submitBtn'])){
         echo "Form Submitted<hr />";
         $fname = filter_input(INPUT_POST,'fname');
-        if ($fname == "" ){
-            echo "Please enter a name";
-        }
         $lname = filter_input(INPUT_POST,'lname');
         $married = filter_input(INPUT_POST,'married');
         $bday = filter_input(INPUT_POST,'bday');
-        $height = filter_input(INPUT_POST,'height');
-        $weight = filter_input(INPUT_POST,'weight');
+        $height = filter_input(INPUT_POST,'height', FILTER_VALIDATE_FLOAT);
+        $weight = filter_input(INPUT_POST,'weight', FILTER_VALIDATE_FLOAT);
     }
     else {
-        echo "Initial Load";
+        $height = 0;
+        $weight = 0;
+    }
+    $error = "";
+    if ($height < 0 and $height > 120){
+        $error .= "<li>Height must be at least 1 inch</li>";
+    }
+    if ($error !=""){
+        $error .= "<ul>$error</ul>";
     }
 ?>
 <!DOCTYPE html>
@@ -33,16 +38,16 @@
         <input type="text" name="lname" value="" required>
         <br><br>
         <label for="married">Married:</label>
-        <input type="checkbox" name="married" required>
+        <input type="checkbox" name="married">
         <br><br>
         <label for="bday">Birth Date:</label>
         <input type="date" name="bday" required>
         <br><br>
         <label for="height">Height(in):</label>
-        <input type="number" name="height" value="0" required>
+        <input type="number" name="height" value="" required>
         <br><br>
         <label for="weight">Weight:</label>
-        <input type="number" name="weight" value="0" required>
+        <input type="number" name="weight" value="" required>
         <br><br>
         <input type="submit" name="submitBtn"/>
         </form>
