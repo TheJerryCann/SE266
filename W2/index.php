@@ -1,15 +1,15 @@
 <?php
     if (isset($_POST['submitBtn'])){
         echo "Form Submitted<hr />";
-        $fname = filter_input(INPUT_POST,'fname',FILTER_VALIDATE_TEXT);
+        $fname = filter_input(INPUT_POST,'fname');
         if ($fname == "" ){
             echo "Please enter a name";
         }
-        $lname = filter_input(INPUT_POST,'lname',FILTER_VALIDATE_TEXT);
-        $married = filter_input(INPUT_POST,'married',FILTER_VALIDATE_CHECKBOX);
-        $bday = filter_input(INPUT_POST,'bday',FILTER_VALIDATE_DATE);
-        $height = filter_input(INPUT_POST,'height',FILTER_VALIDATE_NUMBER);
-        $weight = filter_input(INPUT_POST,'weight',FILTER_VALIDATE_NUMBER);
+        $lname = filter_input(INPUT_POST,'lname');
+        $married = filter_input(INPUT_POST,'married');
+        $bday = filter_input(INPUT_POST,'bday');
+        $height = filter_input(INPUT_POST,'height');
+        $weight = filter_input(INPUT_POST,'weight');
     }
     else {
         echo "Initial Load";
