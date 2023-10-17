@@ -44,7 +44,7 @@
         <label for="weight">Weight:</label>
         <input type="number" name="weight" value="0" required>
         <br><br>
-        <input type="button" name="submitBtn" value="submit"/>
+        <input type="submit" name="submitBtn"/>
         </form>
 </body>
 </html>
