@@ -1,12 +1,12 @@
 <?php
 
     if (isset($_POST['submit'])){
-        echo "Form Submitted<hr />"
-        echo $_POST['fname']
-    }
+        echo "Form Submitted<hr />";
+        echo $_POST['fname'];
+    };
     else {
-        echo "ERROR"
-    }
+        echo "ERROR";
+    };
 
 ?>
 <!DOCTYPE html>
