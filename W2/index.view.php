@@ -11,24 +11,24 @@
     <form action="index.view.php" method="post">
         <label for="fname">First Name:</label>
         <input type="text" name="fname" required>
-    </form>
-    <br><br>
-    <label for="lname">Last Name:</label>
-    <input type="text" name="lname" required>
-    <br><br>
-    <label for="married">Married:</label>
-    <input type="radio" name="married" required>
-    <br><br>
-    <label for="bday">Birth Date:</label>
-    <input type="date" name="bday" required>
-    <br><br>
-    <label for="height">Height:</label>
-    <input type="number" name="height" required>
-    <br><br>
-    <label for="weight">Weight:</label>
-    <input type="number" name="weight" required>
-    <br><br>
-    <input type="button" id="submit" value="submit" onclick="" />
+        <br><br>
+        <label for="lname">Last Name:</label>
+        <input type="text" name="lname" required>
+        <br><br>
+        <label for="married">Married:</label>
+        <input type="radio" name="married" required>
+        <br><br>
+        <label for="bday">Birth Date:</label>
+        <input type="date" name="bday" required>
+        <br><br>
+        <label for="height">Height:</label>
+        <input type="number" name="height" required>
+        <br><br>
+        <label for="weight">Weight:</label>
+        <input type="number" name="weight" required>
+        <br><br>
+        <input type="button" id="submit" value="submit" onclick="" />
+        </form>
 </body>
 <script>
     fname = document.querySelector('#fname').value
