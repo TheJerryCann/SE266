@@ -8,8 +8,10 @@
     <h1>Patient Intake Form</h1>
 </head>
 <body>
-    <label for="fname">First Name:</label>
-    <input type="text" name="fname" required>
+    <form action="index.view.php" method="post">
+        <label for="fname">First Name:</label>
+        <input type="text" name="fname" required>
+    </form>
     <br><br>
     <label for="lname">Last Name:</label>
     <input type="text" name="lname" required>
@@ -29,11 +31,11 @@
     <input type="button" id="submit" value="submit" onclick="" />
 </body>
 <script>
-    $fname = document.querySelector('#fname').value
-    $lname = document.querySelector('#lname').value
-    $married = document.querySelector('#married').value
-    $bday = document.querySelector('#bday').value
-    $height = document.querySelector('#height').value
-    $weight = document.querySelector('#weight').value
+    fname = document.querySelector('#fname').value
+    lname = document.querySelector('#lname').value
+    married = document.querySelector('#married').value
+    bday = document.querySelector('#bday').value
+    height = document.querySelector('#height').value
+    weight = document.querySelector('#weight').value
 </script>
 </html>
