@@ -2,10 +2,10 @@
 
     if (isset($_POST['submit'])){
         echo "Form Submitted<hr />";
-    };
+    }
     else {
         echo "ERROR";
-    };
+    }
 
 ?>
 <!DOCTYPE html>
