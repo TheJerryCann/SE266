@@ -11,16 +11,16 @@
 <body>
     <form action="index.php" method="post"> <!-- All inputs for patient -->
         <label for="fname">First Name:</label>
-        <input type="text" name="fname" value="" required>
+        <input type="text" name="fname" value="<?= $fname; ?>" required>
         <br><br>
         <label for="lname">Last Name:</label>
-        <input type="text" name="lname" value="" required>
+        <input type="text" name="lname" value="<?= $lname; ?>" required>
         <br><br>
         <label for="married">Married:</label>
-        <input type="checkbox" name="married">
+        <input type="checkbox" name="married" value="<?= $married; ?>">
         <br><br>
         <label for="bday">Birth Date:</label>
-        <input type="date" name="bday" required>
+        <input type="date" name="bday" value="<?= $bday; ?>" required>
         <br><br>
         <label for="heightFT">Height(ft):</label>
         <input type="number" name="heightFT" value="" required>
@@ -29,7 +29,7 @@
         <input type="number" name="heightIN" value="" required>
         <br><br>
         <label for="weight">Weight:</label>
-        <input type="number" name="weight" value="" required>
+        <input type="number" name="weight" value="<?= $weight; ?>" required>
         <br><br>
         <input type="submit" name="submitBtn"/> <!-- Submit Button -->
         </form>
