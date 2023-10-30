@@ -9,6 +9,11 @@ class CheckingAccount extends Account
 	public function withdrawal($amount) 
 	{
 		// write code here. Return true if withdrawal goes through; false otherwise
+		if ($amount > 0 && ($this->balance - $amount >= self::OVERDRAW_LIMIT)){
+			$this->balance -> $amount;
+			return true;
+		}
+		return false;
 	} // end withdrawal
 
 	//freebie. I am giving you this code.
