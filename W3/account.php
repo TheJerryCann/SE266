@@ -26,7 +26,7 @@ abstract class Account
 	{
 		// write code here
 		if ($amount > 0) {
-			$this->balance += $amount
+			$this->balance += $amount;
 			return true;
 		}
 	} // end deposit
@@ -58,9 +58,9 @@ abstract class Account
 	protected function getAccountDetails()
 	{
 		// write code here
-		$accountDetails = "Account ID: $this->accountId <br>";
-		$accountDetails = "Balance: $this->balance <br>";
-		$accountDetails = "Start Date: $this->startDate <br>";
+		$accountDetails = "Account ID: {$this->accountId} <br>";
+		$accountDetails = "Balance: {$this->balance} <br>";
+		$accountDetails = "Start Date: {$this->startDate} <br>";
 
 		return $accountDetails;
 	} // end getAccountDetails
