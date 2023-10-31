@@ -1,21 +1,65 @@
 
 <?php
-    if (isset ($_POST['withdrawChecking'])) 
-    {
-        echo "I pressed the checking withdrawal button";
-    } 
-    else if (isset ($_POST['depositChecking'])) 
-    {
-        echo "I pressed the checking deposit button";
-    } 
-    else if (isset ($_POST['withdrawSavings'])) 
-    {
-        echo "I pressed the savings withdrawal button";
-    } 
-    else if (isset ($_POST['depositSavings'])) 
-    {
-        echo "I pressed the savings deposit button";
-    } 
+
+    require_once "checking.php";
+    require_once "savings.php";
+
+    if (isset($_POST['checkingBalance'])){
+        $checkingBalance = filter_input(INPUT_POST, 'checkingBalance');
+        $savingsBalance = filter_input(INPUT_POST, 'savingsBalance');
+    }
+    else{
+        $checkingBalance = 0;
+        $savingsBalance = 0;
+    }
+
+    $checking = new CheckingAccount('C123', $checkingBalance, '12-20-2019');
+    $savings = new SavingsAccount ('S123', $savingsBalance, '03-20-2020');
+
+    $confirmation = "";
+    
+    if ($_SERVER["REQUEST_METHOD"] === "POST"){
+        if (isset ($_POST['withdrawChecking'])) 
+        {
+            $withdrawAmount = (float)$_POST['checkingWithdrawAmount'];
+            if ($checking->withdrawal($withdrawAmount)){
+                $confirmation = "Withdrawal Success" . $checking->getBalance();
+            }
+            else{
+                $confirmation = "Withdrawal Failed";
+            }
+        } 
+        else if (isset ($_POST['depositChecking'])) 
+        {
+            $depositAmount = (float)$_POST['checkingDepositAmount'];
+            if ($checking->deposit($depositAmount)){
+                $confirmation = "Deposit Success" . $checking->getBalance();
+            }
+            else{
+                $confirmation = "Deposit Failed";
+            }
+        } 
+        else if (isset ($_POST['withdrawSavings'])) 
+        {
+            $depositAmount = (float)$_POST['savingsDepositAmount'];
+            if ($savings->withdraw($withdrawAmount)){
+                $confirmation = "Withdrawal Success" . $savings->getBalance();
+            }
+            else{
+                $confirmation = "Withdrawal Failed";
+            }
+        } 
+        else if (isset ($_POST['depositSavings'])) 
+        {
+            $depositAmount = (float)$_POST['savingsDepositAmount'];
+            if ($savings->deposit($depositAmount)){
+                $confirmation = "Deposit Success" . $savings->getBalance();
+            }
+            else{
+                $confirmation = "Deposit Failed";
+            }
+        } 
+    }
      
 ?>
 
@@ -62,12 +106,14 @@
             
             <div class="account">
               
-                    
+                    <?php echo $checking->getAccountDetails();?>
                     <div class="accountInner">
+                        <input type="hidden" name="checkingBalance" value="<?= $checking -> getBalance();?>"/>
                         <input type="text" name="checkingWithdrawAmount" value="" />
                         <input type="submit" name="withdrawChecking" value="Withdraw" />
                     </div>
                     <div class="accountInner">
+                        
                         <input type="text" name="checkingDepositAmount" value="" />
                         <input type="submit" name="depositChecking" value="Deposit" /><br />
                     </div>
@@ -76,8 +122,9 @@
 
             <div class="account">
                
-                    
+                    <?php echo $savings->getAccountDetails();?>
                     <div class="accountInner">
+                        <input type="hidden" name="savingBalance" value="<?= $savings -> getBalance();?>"/>
                         <input type="text" name="savingsWithdrawAmount" value="" />
                         <input type="submit" name="withdrawSavings" value="Withdraw" />
                     </div>
@@ -90,5 +137,11 @@
             
         </div>
     </form>
+    <div class="message">
+        <?php
+        if(!empty($confirmation)){
+            echo '<div class="confirmation">' . $confirmation . '</div>';
+        }
+    ?>
 </body>
 </html>
