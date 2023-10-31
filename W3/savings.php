@@ -8,10 +8,11 @@ class SavingsAccount extends Account
 	public function withdrawal($amount) 
 	{
 		// write code here. Return true if withdrawal goes through; false otherwise
-		if ($amount > 0 && $this->balance >= $amount) {
+		if ($amount > 0 && $this->balance - $amount) {
 			$this->balance -= $amount;
 			return true;
 		}
+		return false;
 	} //end withdrawal
 
 	public function getAccountDetails() 
