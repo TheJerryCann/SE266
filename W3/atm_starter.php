@@ -6,7 +6,7 @@
 
     if (isset($_POST['checkingBalance'])){
         $checkingBalance = filter_input(INPUT_POST, 'checkingBalance');
-        $savingsBalance = filter_input(INPUT_POST, 'savingsBalance');
+        $savingsBalance = filter_input(INPUT_POST, 'savingBalance');
     }
     else{
         $checkingBalance = 0;
@@ -23,7 +23,7 @@
         {
             $withdrawAmount = (float)$_POST['checkingWithdrawAmount'];
             if ($checking->withdrawal($withdrawAmount)){
-                $confirmation = "Withdrawal Success" . $checking->getBalance();
+                $confirmation = "Withdrawal Success";
             }
             else{
                 $confirmation = "Withdrawal Failed";
@@ -33,7 +33,7 @@
         {
             $depositAmount = (float)$_POST['checkingDepositAmount'];
             if ($checking->deposit($depositAmount)){
-                $confirmation = "Deposit Success" . $checking->getBalance();
+                $confirmation = "Deposit Success";
             }
             else{
                 $confirmation = "Deposit Failed";
@@ -41,9 +41,9 @@
         } 
         else if (isset ($_POST['withdrawSavings'])) 
         {
-            $depositAmount = (float)$_POST['savingsDepositAmount'];
-            if ($savings->withdraw($withdrawAmount)){
-                $confirmation = "Withdrawal Success" . $savings->getBalance();
+            $withdrawAmount = (float)$_POST['savingsWithdrawAmount'];
+            if ($savings->withdrawal($withdrawAmount)){
+                $confirmation = "Withdrawal Success";
             }
             else{
                 $confirmation = "Withdrawal Failed";
@@ -53,7 +53,7 @@
         {
             $depositAmount = (float)$_POST['savingsDepositAmount'];
             if ($savings->deposit($depositAmount)){
-                $confirmation = "Deposit Success" . $savings->getBalance();
+                $confirmation = "Deposit Success";
             }
             else{
                 $confirmation = "Deposit Failed";
@@ -106,7 +106,12 @@
             
             <div class="account">
               
-                    <?php echo $checking->getAccountDetails();?>
+                    <?php
+                    echo '<h2>Checking Account</h2>';
+                    echo 'Account ID: ' . $checking->getAccountId() . '<br>';
+                    echo 'Balance: ' . $checking->getBalance() . '<br>';
+                    echo 'Start Date: ' . $checking->getStartDate() . '<br>';
+                    ?>
                     <div class="accountInner">
                         <input type="hidden" name="checkingBalance" value="<?= $checking -> getBalance();?>"/>
                         <input type="text" name="checkingWithdrawAmount" value="" />
@@ -122,7 +127,12 @@
 
             <div class="account">
                
-                    <?php echo $savings->getAccountDetails();?>
+                    <?php
+                    echo '<h2>Savings Account</h2>';
+                    echo 'Account ID: ' . $savings->getAccountId() . '<br>';
+                    echo 'Balance: ' . $savings->getBalance() . '<br>';
+                    echo 'Start Date: ' . $savings->getStartDate() . '<br>';
+                    ?>
                     <div class="accountInner">
                         <input type="hidden" name="savingBalance" value="<?= $savings -> getBalance();?>"/>
                         <input type="text" name="savingsWithdrawAmount" value="" />
