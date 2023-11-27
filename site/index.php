@@ -4,8 +4,8 @@
     <li><a href="../W1/index.php">Week 1</li>
     <li><a href="../W2/index.php">Week 2</li>
     <li><a href="../W3/index.php">Week 3</li>
-    <li><a href="/W4/viewPatients.php">Week 4</li>
-    <li><a href="/W5/viewPatients.php">Week 5</li>
+    <li><a href="../W4/viewPatients.php">Week 4</li>
+    <li><a href="../W5/viewPatients.php">Week 5</li>
     <li><a href="W6/index.php">Week 6</li>
     <li><a href="W7/index.php">Week 7</li>
     <li><a href="W8/index.php">Week 8</li>
