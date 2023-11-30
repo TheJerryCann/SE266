@@ -6,11 +6,7 @@
     <li><a href="../W3/atm_starter.php">Week 3</li>
     <li><a href="../W4/viewPatients.php">Week 4</li>
     <li><a href="../W5/viewPatients.php">Week 5</li>
-    <li><a href="W6/index.php">Week 6</li>
-    <li><a href="W7/index.php">Week 7</li>
-    <li><a href="W8/index.php">Week 8</li>
-    <li><a href="W9/index.php">Week 9</li>
-    <li><a href="W10/index.php">Week 10</li>
+    <li><a href="../W6/login.php">Week 6</li>
 </ul>
 <?php
 $file = basename($_SERVER['PHP_SELF']);
