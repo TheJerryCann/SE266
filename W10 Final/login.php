@@ -32,6 +32,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <input type="pw" id="pw" name="pw" required><br><br>
 
         <input type="submit" value="Login">
+    <style>      
+    body{
+        background-color: #4C4747;
+        color: white;
+        text-align: center;
+    }
+    table,tr,th,td{
+        border: 1px solid black;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    label{
+        margin-left: 20px;
+        margin-right: 5px;
+    }
+    a{
+        color: darkblue;
+    }
+
+</style>
     </form>
 </body>
 </html>
