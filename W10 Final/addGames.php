@@ -1,4 +1,5 @@
 <?php
+    session_start();
 
     include (__DIR__ . '/modelGames.php');
     include (__DIR__ . '/db.php');
@@ -8,6 +9,13 @@
         $now = new DateTime();
         $interval = $now->diff($date);
         return $interval->y;
+    }
+
+    if (!isset($_SESSION['username'])) {
+        header("Location: login.php");
+    }
+    else {
+        $games = getGames();
     }
 
     $error = 0;
@@ -70,6 +78,27 @@
     <title>Game Creation Log</title>
     <h1>Game Creation Log</h1>
     <form method="post" action="addGames.php">
+    <style>      
+    body{
+        background-color: #4C4747;
+        color: white;
+        text-align: center;
+    }
+    table,tr,th,td{
+        border: 1px solid black;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    label{
+        margin-left: 20px;
+        margin-right: 5px;
+    }
+    a{
+        color: darkblue;
+    }
+
+</style>
 </head>
 <body>
     <form action="index.php" method="post"> 
