@@ -9,6 +9,12 @@
 <body>
 
 <?php
+
+session_start();
+
+if (!isset($_SESSION['username'])) {
+    header("Location: login.php");
+}
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -62,6 +68,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Log</title>
+    <style>      
+    body{
+        background-color: #4C4747;
+        color: white;
+        text-align: center;
+    }
+    table,tr,th,td{
+        border: 1px solid black;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    label{
+        margin-left: 20px;
+        margin-right: 5px;
+    }
+    a{
+        color: darkblue;
+    }
+
+</style>
 </head>
 <body>
 
