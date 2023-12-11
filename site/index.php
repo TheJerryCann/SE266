@@ -7,6 +7,7 @@
     <li><a href="../W4/viewPatients.php">Week 4</li>
     <li><a href="../W5/viewPatients.php">Week 5</li>
     <li><a href="../W6/login.php">Week 6</li>
+    <li><a href="../W10/login.php">Final Project</li>
 </ul>
 <?php
 $file = basename($_SERVER['PHP_SELF']);
